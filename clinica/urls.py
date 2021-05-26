@@ -18,11 +18,13 @@ from django.urls import path, include
 from rest_framework import routers
 from pacientes.api.viewsets import PacientesViewSet
 from agendamentos.api.viewsets import AgendamentosViewSet
+from historicos.api.viewsets import HistoricosViewSet
 
 
 router = routers.DefaultRouter()
 router.register(r'pacientes', PacientesViewSet)
 router.register(r'agendamentos', AgendamentosViewSet)
+router.register(r'historicos', HistoricosViewSet)
 
 
 urlpatterns = [
